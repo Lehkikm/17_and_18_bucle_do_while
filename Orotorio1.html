@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/styles.css" rel="stylesheet">
+    <meta charset="UTF-8">
+  </head>
+  <body>
+  <div id="Contenedor">
+	  <div id="Cuerpo">
+
+		<script type="text/javascript">
+
+		  alert(
+        "Este es un juego. Consiste en acertar el número que ha escogido la computadora entre 0 y 100, al azar; en otras palabras debes adivinar un número que esté entre esas cifras. ¡Adelante!"
+      );
+
+      var azar=Math.round(Math.random()*100); //Numero al azar elegio por a computadora
+
+		  var numero=0; //Numero escrito por el usuario
+		  var intentos=0; //Cantidad de ingresos que ha hecho en el pront
+
+		  do{
+
+  		  numero=prompt("Escribe un número entre 0 y 100");
+
+  		  if(azar>numero){
+
+
+  		    alert("El número está más arriba.");
+
+  		   }
+
+  		  if(azar<numero){
+
+  		    alert("El número está un más abajo.");
+
+  		  }
+
+  		  else if (isNaN (numero)){
+
+  		    alert("Eso no es un número :-/");
+
+  			}
+
+  			intentos++;
+
+		 }while (azar != numero);
+
+		 document.write("<h1>Tu número</h1>");
+		 document.write("<div class=Numero>" + azar + "</div>");
+
+		 document.write("<div class=Espacio>" + "</div>");
+
+		 document.write("<h1>Intentos</h1>");
+		 document.write("<div class=Numero>" + intentos + "</div>");
+
+		</script>
+
+	  </div>
+   </div>
+  </body>
+</html>
