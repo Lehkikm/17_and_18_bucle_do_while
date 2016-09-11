@@ -1,0 +1,72 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+body{
+  background-color:#404040;
+}
+
+h1{
+  font-size:70pt;
+  color#F1F1F1;
+  text-align:center;
+  text-transform: uppercase;
+}
+
+#Contenedor{
+  margin: 0 auto;
+  margin-top:50px;
+  background-color:inherit;
+  width:900px;
+  height:1200px;
+  font-family: Dejavu Sans Mono, monospace;
+}
+
+#Cuerpo{
+  width:100%
+  text-align:center;
+  padding:20px;
+
+  font-size:30pt;
+  color:#F1F1F1;
+  background-color:inherit;
+}
+
+.Numero{
+  margin:0 auto;
+  margin-top:50px;
+  max-width:200px;
+  height:200px;
+  border: 3px solid #F1F1F1;
+
+  color: #F1F1F1;
+  font-size: 70pt;
+  text-align:center;
+  line-height:200px;
+}
+
+.Espacio{
+  margin:0 auto;
+
+  max-width:200px;
+  height:200px;
+
+  font-size: 70pt;
+  text-align:center;
+  line-height:200px;
+}
+
+/*Otras cosas*/
+
+#Intentos{
+  float: left;
+  width: 300px;
+  height:1200px;
+  background-color: #534e4e;
+  padding:100px;
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
