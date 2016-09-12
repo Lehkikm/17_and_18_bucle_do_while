@@ -3,62 +3,24 @@
   <head>
     <link href="CSS/Orotorio.css" rel="stylesheet">
     <meta charset="UTF-8">
-
-    <style type="text/css">
-
-        .miCuadro{
-          width:200px;
-          height:200px;
-          background-color:inherit;
-          border-bottom:5px solid #356ade;
-          border-right:5px solid #404040;
-          border-top:5px solid #404040;
-          border-left:5px solid #404040;
-        }
-
-    </style>
-
   </head>
+
   <body>
     <div id="Contenedor">
-	  <div id="Cuerpo">
-
-      <table width= "25%" border= "0">
-
-        <tr>
-
-          <td>
-            <label for= "cosita"></label>
-            <input type="text" name="cosita" id="instruccion" class="miCuadro">
-          </td>
-
-          <td>
-            <label for="cosita2"></label>
-            <input type="text" name="cosita2" id="no_ingresos" class="miCuadro">
-          </td>
-
-        </tr>
-
-      </table>
 
 <!--JavaScript-->
 
 		<script type="text/javascript">
 
+    var azar=Math.round(Math.random()*100); //Number of the computer
+    var numero=0; //Number of the gamer
+    var intentos=0; // Cantidad de veces que ha ingresado erroneamete un numero.
+
 		  alert(
         "Este es un juego. Consiste en acertar el número que ha escogido la computadora entre 0 y 100, al azar; en otras palabras debes adivinar un número que esté entre esas cifras. ¡Adelante!"
       );
 
-      var azar=Math.round(Math.random()*100); //Number of the computer
-		  var numero=0; //Number of the gamer
-		  var intentos=0; // Cantidad de veces que ha ingresado erroneamete un numero.
-
-      //Cuadros de texto
-
-        var leyenda=document.getElementById("instruccion");
-        var cantidad_intentos=document.getElementById("no_ingresos");
-
-      //FIN Cuadros de texto
+    document.write("<div id=Registro class=Textregistro>");
 
 		  do{
 
@@ -66,40 +28,39 @@
 
   		  if(azar>numero){
 
-  		    leyenda.value="Está más arriba"; //Esto se escrib en el cuadro de la izquierda
-          leyenda.style.fontSize="60px"; //Propiedades pertinetnes para cambiar propiedades del texto
-          leyenda.style.color="white";
+          alert("Está más arriba");
+          document.write("Está más arriba<br/>.<br/>");
 
   		   }
 
   		  if(azar<numero){
 
-  		    leyenda.value="Está más abajo"; //Esto se escrib en el cuadro de la izquierda
-          leyenda.style.fontSize="60px"; //Propiedades pertinetnes para cambiar propiedades del texto
-          leyenda.style.color="white";
+          alert("Está más abajo");
+  		    document.write("Está más abajo<br/>.<br/>");
 
   		  }
 
     		  else if (isNaN (numero)){
 
-    		    alert("Eso no es un número :-/");
+            alert("Eso no es un número :-/");
+    		    document.write("Eso no es un número :-/<br/>.<br/>");
 
     			}
 
   			intentos++; //Esto hace que cada vez que se ejecute el do while, autoincrementer el valor de la variable intentos que es la que guarda el record por decirlo de alguna manera.
 
-        cantidad_intentos.value=intentos; //Esto se escribe en el cuadro de la derecha
-        cantidad_intentos.style.fontSize="60px";
-        cantidad_intentos.style.color="white";
-        cantidad_intentos.style.textAlign="center";
+
+
 
 		 }while (azar != numero);
 
+     document.write("</div>");
+
+     document.write("<div id=Intentos2 class=Textintentos2>INTENTOS<div class=espacito></div>" + intentos + "</div>")
+
+     document.write("<div id=Circulo class=Textcirc>" + azar + "</div>");
 
     /* document.write("¡Muy bien! Haz hecho" + intentos + " intentos");*/
-
-    leyenda.value="Pefecto.";
-    leyenda.style.color="green";
 
 
 		//  document.write("<h1>Tu número</h1>");
@@ -112,7 +73,6 @@
 
 		</script>
 
-	  </div>
    </div>
   </body>
 </html>
